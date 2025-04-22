@@ -54,7 +54,7 @@ public class EmployeeTypeDAO implements IEmployeeTypeDAO{
     @Override
     public List<EmployeeType> findAll() throws Exception {
          try {
-             Query query = EntityManagerHelper.getEntityManager().createNamedQuery(" EmployeeType.findAll ");
+             Query query = EntityManagerHelper.getEntityManager().createNamedQuery("EmployeeType.findAll");
              return query.getResultList();
         } catch (RuntimeException e) {
             throw e;

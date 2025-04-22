@@ -53,7 +53,7 @@ public class KeyRoomDAO implements IKeyRoomDAO{
     @Override
     public List<KeyRoom> findAll() throws Exception {
         try {
-             Query query = EntityManagerHelper.getEntityManager().createNamedQuery(" KeyRoom.findAll ");
+             Query query = EntityManagerHelper.getEntityManager().createNamedQuery("KeyRoom.findAll");
              return query.getResultList();
         } catch (RuntimeException e) {
             throw e;

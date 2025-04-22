@@ -53,11 +53,10 @@ public class RecordDAO implements IRecordDAO{
     @Override
     public List<Record> findAll() throws Exception {
         try {
-             Query query = EntityManagerHelper.getEntityManager().createNamedQuery(" Record.findAll ");
+             Query query = EntityManagerHelper.getEntityManager().createNamedQuery("Record.findAll");
              return query.getResultList();
         } catch (RuntimeException e) {
             throw e;
         }
     }
-    
 }
